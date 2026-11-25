@@ -1,23 +1,29 @@
-from sqlalchemy import create_engine, event
+
+import os
+
+from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
 
-# SQLite database configuration
-DATABASE_URL = "sqlite:///./food_plant.db"
+
+# Database configuration
+DATABASE_URL = os.getenv(
+    "DATABASE_URL",
+    "sqlite:///./food_plant.db"
+)
+
+# SQLite configuration
+connect_args = {}
+
+if DATABASE_URL.startswith("sqlite"):
+    connect_args = {
+        "check_same_thread": False
+    }
 
 # Create database engine
 engine = create_engine(
     DATABASE_URL,
-    connect_args={"check_same_thread": False}
+    connect_args=connect_args
 )
-
-
-# Enable SQLite foreign-key enforcement
-@event.listens_for(engine, "connect")
-def enable_sqlite_foreign_keys(dbapi_connection, connection_record):
-    cursor = dbapi_connection.cursor()
-    cursor.execute("PRAGMA foreign_keys=ON")
-    cursor.close()
-
 
 # Create database session
 SessionLocal = sessionmaker(
@@ -26,15 +32,16 @@ SessionLocal = sessionmaker(
     bind=engine
 )
 
-# Base class for database models
+# Create base class for SQLAlchemy models
 Base = declarative_base()
 
 
-# Database session dependency
+# Database dependency for FastAPI
 def get_db():
     db = SessionLocal()
 
     try:
         yield db
+
     finally:
         db.close()

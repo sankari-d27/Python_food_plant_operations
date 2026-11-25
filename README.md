@@ -3,6 +3,12 @@ Chennai Frozen Foods Pvt. Ltd.
 
 A Python-based backend application developed to manage and monitor the daily operations of a frozen food manufacturing plant.
 
+Live Application: https://python-food-plant-operations.onrender.com
+
+Swagger API Documentation: https://python-food-plant-operations.onrender.com/docs
+
+OpenAPI JSON: https://python-food-plant-operations.onrender.com/openapi.json
+
 📌 Project Overview
 
 The Food Plant Operations Management System is designed to replace manual registers, spreadsheets and disconnected operational records with a centralized digital management application.
@@ -21,6 +27,7 @@ Manage approval workflows.
 Import and validate historical operational data.
 Track important user activities through audit logs.
 Improve data accuracy and operational efficiency.
+
 🛠️ Technology Stack
 Technology	Purpose
 Python 3.11	Programming language
@@ -34,6 +41,7 @@ python-jose	JWT authentication
 python-dotenv	Environment configuration
 Pytest	Automated testing
 Swagger UI	API documentation
+
 📂 Project Modules
 User Management
 Authentication and Authorization
@@ -48,6 +56,7 @@ Quality Management
 Approval Management
 Historical Data Imports
 Audit Trail Management
+
 🏗️ Project Architecture
 
 The application follows a layered architecture:
@@ -62,6 +71,7 @@ Repositories: Handle database operations.
 Strategies: Support different historical data import processes.
 Imports: Manage historical data and validation reports.
 Tests: Verify application functionality and business rules.
+
 🔐 Authentication and Security
 
 The application implements:
@@ -79,6 +89,7 @@ Admin	Administrative management
 Production	Production operations
 Quality	Quality inspections
 Manager	Management and oversight
+
 ⚙️ Installation and Setup
 1. Clone the Repository
 bash

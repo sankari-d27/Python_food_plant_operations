@@ -1,0 +1,7 @@
+
+material_name,quantity,reorder_level
+Potato,500,100
+Cooking Oil,300,50
+Flour,-20,30
+Salt,200,50
+,100,20

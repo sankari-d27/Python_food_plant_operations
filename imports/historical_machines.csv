@@ -1,0 +1,7 @@
+
+machine_name,machine_code,status
+Freezer Machine,M001,Operational
+Packing Machine,M002,Operational
+Conveyor Machine,M003,Maintenance
+,M004,Operational
+Cooling Machine,,Operational

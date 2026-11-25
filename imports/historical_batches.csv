@@ -1,0 +1,7 @@
+
+batch_number,quantity,production_line_id
+BATCH001,500,1
+BATCH002,750,2
+BATCH003,-100,3
+,300,1
+BATCH004,600,2

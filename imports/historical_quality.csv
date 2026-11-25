@@ -1,0 +1,6 @@
+
+batch_id,test_name,moisture_reading,test_date,recorded_date
+1,Moisture Test,12.5,2026-10-10,2026-10-10
+2,Moisture Test,,2026-10-11,2026-10-11
+3,Moisture Test,13.2,2026-10-12,2026-10-13
+4,Moisture Test,150,2026-10-13,2026-10-13
